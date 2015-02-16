@@ -7,9 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <CoreLocation/CoreLocation.h>
+#import <GoogleMaps/GoogleMaps.h>
 
-@interface Home : UIViewController
 
+
+@interface Home : UIViewController <CLLocationManagerDelegate>
+
+@property (strong,nonatomic)CLLocationManager *locationManager;
+@property (strong,nonatomic)CLLocation *location;
+
+
+@property (strong, nonatomic) IBOutlet UIView *viewMap;
+
+@property (strong, nonatomic) IBOutlet UIButton *btnMap;
+- (IBAction)btnMapPressed:(id)sender;
 
 @end
 
